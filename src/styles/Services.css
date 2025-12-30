@@ -1,0 +1,114 @@
+.services-container {
+  min-height: calc(100vh - 120px);
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.services-title {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.services-content {
+  display: flex;
+  justify-content: center;
+}
+
+.services-main-card {
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 3rem;
+  width: 100%;
+  border: 2px solid #16213e;
+}
+
+.services-main-title {
+  font-size: 2.5rem;
+  color: #d4af37;
+  margin-bottom: 1.5rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.services-main-description {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.services-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.services-category-card {
+  background: #16213e;
+  border-radius: 8px;
+  padding: 2rem;
+  border: 2px solid #0f1624;
+  transition: all 0.3s ease;
+}
+
+.services-category-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-5px);
+}
+
+.services-category-icon {
+  font-size: 2.5rem;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.services-category-title {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.services-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-category-list li {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  padding-left: 1rem;
+  position: relative;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.services-category-list li::before {
+  content: '•';
+  color: #d4af37;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 2rem;
+  }
+  
+  .services-main-title {
+    font-size: 2rem;
+  }
+  
+  .services-categories {
+    grid-template-columns: 1fr;
+  }
+}
+

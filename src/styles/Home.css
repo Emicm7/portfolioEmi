@@ -1,0 +1,72 @@
+.home-container {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.home-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.home-greeting {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.home-name {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.home-role {
+  font-size: 2rem;
+  color: #d4af37;
+  margin-bottom: 3rem;
+  min-height: 2.5rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.typing-text {
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+  color: #d4af37;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-greeting {
+    font-size: 1.8rem;
+  }
+  
+  .home-name {
+    font-size: 2.5rem;
+  }
+  
+  .home-role {
+    font-size: 1.5rem;
+  }
+}
+

@@ -1,0 +1,248 @@
+.works-container {
+  min-height: calc(100vh - 120px);
+  padding: 3rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.works-title {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.works-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.works-nav-button {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #d4af37;
+  border: none;
+  color: #0a0a0a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.works-nav-button.prev {
+  left: 2rem;
+}
+
+.works-nav-button.next {
+  right: 2rem;
+}
+
+.works-nav-button:hover {
+  background: #f4d03f;
+  transform: scale(1.1);
+}
+
+.works-card {
+  width: 100%;
+  max-width: 1200px;
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  border: 2px solid #16213e;
+}
+
+.works-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.works-card-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.works-card-description {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.works-card-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.works-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.works-tech-pill {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: #f6f6f6;
+  font-size: 0.9rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.works-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.works-button.github {
+  background: #16213e;
+  color: #ffffff;
+  border-color: #16213e;
+}
+
+.works-button.github:hover {
+  background: #0f1624;
+  border-color: #d4af37;
+}
+
+.works-button.website {
+  background: #d4af37;
+  color: #0a0a0a;
+  border-color: #d4af37;
+}
+
+.works-button.website:hover {
+  background: #f4d03f;
+  transform: translateY(-2px);
+}
+
+.works-card-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.works-iframe-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #0f1624;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.works-iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+}
+
+.works-iframe-wrapper:hover iframe {
+  pointer-events: auto;
+}
+
+.works-iframe-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.2));
+  color: #d4af37;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.works-iframe-wrapper:hover .works-iframe-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.works-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #0f1624;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.works-image:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.works-image-placeholder {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #16213e;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #0f1624;
+}
+
+.works-image-placeholder span {
+  font-size: 2rem;
+  color: #d4af37;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+@media (max-width: 968px) {
+  .works-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .works-nav-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .works-nav-button.prev {
+    left: 1rem;
+  }
+  
+  .works-nav-button.next {
+    right: 1rem;
+  }
+  
+  .works-title {
+    font-size: 2rem;
+  }
+}
+

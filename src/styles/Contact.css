@@ -1,0 +1,198 @@
+.contact-container {
+  min-height: calc(100vh - 120px);
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-title {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contact-form {
+  width: 100%;
+  background: #1a1a2e;
+  border-radius: 12px;
+  padding: 3rem;
+  border: 2px solid #16213e;
+}
+
+.contact-form-group {
+  margin-bottom: 2rem;
+}
+
+.contact-form-group label {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background: #0a0a0a;
+  border: 2px solid #16213e;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+  transition: all 0.3s ease;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.contact-input-error {
+  border-color: #f44336 !important;
+  animation: shake 0.5s ease-in-out;
+}
+
+.contact-input-error:focus {
+  border-color: #f44336 !important;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-error-message {
+  display: block;
+  color: #f44336;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.contact-submit {
+  width: 100%;
+  padding: 1rem;
+  background: #d4af37;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.contact-submit:hover:not(:disabled) {
+  background: #f4d03f;
+  transform: translateY(-2px);
+}
+
+.contact-submit:disabled {
+  background: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.contact-notification {
+  width: 100%;
+  padding: 1rem;
+  background: #1a1a2e;
+  border: 2px solid #d4af37;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: fadeIn 0.3s ease-out;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.contact-notification-success {
+  border-color: #4caf50;
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
+}
+
+.contact-notification-error {
+  border-color: #f44336;
+  box-shadow: 0 4px 20px rgba(244, 67, 54, 0.3);
+}
+
+.contact-notification-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d4af37;
+  flex-shrink: 0;
+}
+
+.contact-notification-success .contact-notification-icon {
+  color: #4caf50;
+}
+
+.contact-notification-error .contact-notification-icon {
+  color: #f44336;
+}
+
+.contact-notification-message {
+  color: #ffffff;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+  
+  .contact-form {
+    padding: 2rem;
+  }
+
+  .contact-notification {
+    padding: 0.9rem;
+  }
+
+  .contact-notification-message {
+    font-size: 0.9rem;
+  }
+}
+

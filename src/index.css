@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #0a0a0a;
+  --color-dark-blue: #1a1a2e;
+  --color-dark-blue-2: #16213e;
+  --color-dark-blue-3: #0f1624;
+  --color-gold: #d4af37;
+  --color-gold-light: #f4d03f;
+  --color-white: #ffffff;
+  --color-text: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Fira Code', 'Courier New', 'Consolas', monospace;
+  background: var(--color-black);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
+  z-index: 1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-light);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+/* Right sidebar gold accent */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100vh;
+  background: var(--color-gold);
+  z-index: 998;
+  pointer-events: none;
+}
+
+/* Smooth transitions */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}

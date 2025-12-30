@@ -1,0 +1,95 @@
+.about-container {
+  min-height: calc(100vh - 120px);
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.about-title {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-image-container {
+  position: sticky;
+  top: 2rem;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #16213e;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  filter: grayscale(5%) contrast(110%);
+  transition: transform 0.6s ease, box-shadow 0.6s ease, filter 0.6s ease;
+}
+
+.about-image:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  filter: grayscale(0) contrast(115%);
+}
+
+.about-text {
+  color: #e0e0e0;
+  line-height: 1.8;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+}
+
+.about-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-section-title {
+  font-size: 1.5rem;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-family: 'Courier New', 'Fira Code', 'Consolas', monospace;
+}
+
+.about-info {
+  font-size: 1rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+}
+
+.about-info strong {
+  color: #ffffff;
+}
+
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image-container {
+    position: static;
+    max-width: 300px;
+    margin: 0 auto 2rem;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+}
+
