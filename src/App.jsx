@@ -3,6 +3,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import Navigation from './components/Navigation';
 import LanguageSwitch from './components/LanguageSwitch';
 import AnimatedBackground from './components/AnimatedBackground';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Works from './pages/Works';
@@ -14,6 +15,7 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
+        <ScrollToTop />
         <div className="app">
           <AnimatedBackground />
           <LanguageSwitch />

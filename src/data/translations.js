@@ -1,11 +1,11 @@
 export const translations = {
   es: {
     nav: {
-      home: 'home',
-      about: 'about me',
-      works: 'works',
-      services: 'services',
-      contact: 'contact me'
+      home: 'inicio',
+      about: 'sobre mí',
+      works: 'trabajos',
+      services: 'servicios',
+      contact: 'contáctame'
     },
     home: {
       greeting: 'Hola, soy',
@@ -35,6 +35,7 @@ export const translations = {
     },
     works: {
       title: '{My works}',
+      website: 'Visitar Sitio Web',
       ticketera: {
         title: 'Municipalidad de Calingasta',
         description: 'Diseñé e implementé el sitio web oficial de la Municipalidad de Calingasta, una plataforma completa para la gestión de información municipal, servicios públicos y turismo. Incluye panel de administración de noticias, formularios de contacto, integración con Google Maps, autenticación y base de datos en la nube, además de optimización SEO.',
@@ -126,6 +127,7 @@ export const translations = {
     },
     works: {
       title: '{My works}',
+      website: 'Visit Website',
       ticketera: {
         title: 'Municipality of Calingasta',
         description: 'I designed and implemented the official website for the Municipality of Calingasta, a complete platform for managing municipal information, public services and tourism. It includes an admin panel for news, contact forms, Google Maps integration, cloud-based authentication and database, plus SEO optimization.',

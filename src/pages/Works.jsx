@@ -52,7 +52,6 @@ const Works = () => {
         <div className="works-card">
           <div className="works-card-content">
             <h2 className="works-card-title">{project.title}</h2>
-            <p className="works-card-description">{project.description}</p>
             <div className="works-tech-stack">
               {project.technologies.map((tech) => (
                 <span key={tech} className="works-tech-pill">
@@ -67,7 +66,7 @@ const Works = () => {
                 rel="noopener noreferrer"
                 className="works-button website"
               >
-                {t.works.ticketera.website}
+                {t.works.website}
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <line x1="7" y1="17" x2="17" y2="7" />
                   <polyline points="7 7 17 7 17 17" />
